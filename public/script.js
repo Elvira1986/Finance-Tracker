@@ -1,13 +1,17 @@
-"use strict";
-// const financeLogerPerson = "Elvira";
-// console.log(financeLogerPerson);
-// const inputs = document.querySelectorAll("input");
-// inputs.forEach((input) => {
-//   console.log(input);
-// });
+import { Invoice } from "./classes/invoice.js";
+const invOne = new Invoice("mario", "work on the mario website", 250);
+const invTwo = new Invoice("luigi", "work on the luigi website", 300);
+// invOne.client = 'yoshi';
+// invOne.amount = 50;
+let invoices = [];
+invoices.push(invOne);
+invoices.push(invTwo);
+invoices.forEach((inv) => {
+    console.log(inv.client, /*inv.details,*/ inv.amount, inv.format());
+});
 const form = document.querySelector(".new-item-form");
-// console.log(form.children);
-// selecting all inputs
+console.log(form.children);
+// inputs
 const type = document.querySelector("#type");
 const tofrom = document.querySelector("#tofrom");
 const details = document.querySelector("#details");
